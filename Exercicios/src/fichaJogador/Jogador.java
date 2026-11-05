@@ -16,6 +16,9 @@ public class Jogador {
 
 
 
+
+
+
     public void pedirDadosJogador(){
         System.out.println("===== PEDINDO DADOS JOGADOR(A) =====");
 
@@ -27,6 +30,7 @@ public class Jogador {
 
         System.out.println("Digite a idade: ");
         idade = scanner.nextInt();
+
 
         System.out.println("Digite o Nivel: ");
         nivel = scanner.nextInt();
@@ -67,6 +71,7 @@ public class Jogador {
         System.out.println("Jogo Favorito: " + jogoFavorito);
         System.out.println("Nivel: " + nivel);
         System.out.println("");
+        System.out.println("Partidas: " + vitorias + " V" + " /" + derrotas +" D" );
         System.out.printf("Porcentagem de vitórias: %.2f%%\n" , calcularPorcetagem());
     }
 

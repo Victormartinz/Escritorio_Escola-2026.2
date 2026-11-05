@@ -5,16 +5,9 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        Jogador primeiroJogador = new Jogador();
-        Jogador segundoJogador = new Jogador();
+        MenuArena menu = new MenuArena();
 
-        primeiroJogador.pedirDadosJogador();
-//        segundoJogador.pedirDadosJogador();
-
-
-
-        primeiroJogador.mostrarDados();
-//        segundoJogador.mostrarDados();
+        menu.iniciar();
 
     }
 }
