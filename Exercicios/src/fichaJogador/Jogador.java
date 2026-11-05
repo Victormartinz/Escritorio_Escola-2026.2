@@ -10,6 +10,10 @@ public class Jogador {
     int idade;
     String jogoFavorito;
     int nivel;
+    int vitorias;
+    int derrotas;
+    double porcetagem;
+
 
 
     public void pedirDadosJogador(){
@@ -32,6 +36,24 @@ public class Jogador {
 
         System.out.println("Digite o Jogo Favorito: ");
         jogoFavorito = scanner.nextLine();
+
+        System.out.println("Digite a quantidade de vitorias: ");
+        vitorias = scanner.nextInt();
+
+        System.out.println("Digite a quantidade de derrotas: ");
+        derrotas = scanner.nextInt();
+    }
+
+    public double calcularPorcetagem(){
+        int totalJogos = vitorias + derrotas;
+
+        if (totalJogos > 0) {
+            porcetagem = (double)vitorias / totalJogos * 100;
+        }else {
+            porcetagem = 0.0;
+        }
+
+        return porcetagem;
     }
 
     public void mostrarDados(){
@@ -45,6 +67,7 @@ public class Jogador {
         System.out.println("Jogo Favorito: " + jogoFavorito);
         System.out.println("Nivel: " + nivel);
         System.out.println("");
+        System.out.printf("Porcentagem de vitórias: %.2f%%\n" , calcularPorcetagem());
     }
 
 }
