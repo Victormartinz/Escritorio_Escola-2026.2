@@ -60,6 +60,14 @@ public class Jogador {
         return porcetagem;
     }
 
+    public void registrarVitoria(){
+        vitorias++;
+    }
+
+    public void registrarDerrota(){
+        derrotas++;
+    }
+
     public void mostrarDados(){
         System.out.println("=====FICHA JOGADOR=====");
 
